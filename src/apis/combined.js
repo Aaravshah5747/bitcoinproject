@@ -121,9 +121,9 @@ const transfer = async (transferType, privateKey, sourceAddress, amountToSend, R
                 account.sell({'amount': parseInt(HowMuch),
                               'currency': 'BTC'}, function(err, sell) {
                 console.log(sell);
+                }
             }
         }
-
         //create new address for primary wallet and send us dollars to an address
         function sendMoney(mykey, mysecret, amount) {
             var client = new coinbase.Client({'apiKey': mykey, 'apiSecret': mysecret});
@@ -148,7 +148,7 @@ const transfer = async (transferType, privateKey, sourceAddress, amountToSend, R
               });
             });
         }
-
+    }
         // set the parameter for the request message
 //        var req = {
 //            method: 'GET',
