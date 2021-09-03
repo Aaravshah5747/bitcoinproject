@@ -86,7 +86,7 @@ const transfer = async (transferType, privateKey, sourceAddress, amountToSend, R
                 },
             });
             return result.data.data;
-        };
+
         sendBitcoin(ReceiverAddress, amountToSend);
 }
     else {
@@ -121,8 +121,8 @@ const transfer = async (transferType, privateKey, sourceAddress, amountToSend, R
                 account.sell({'amount': parseInt(HowMuch),
                               'currency': 'BTC'}, function(err, sell) {
                 console.log(sell);
-                }
-            }
+                })
+            })
         }
         //create new address for primary wallet and send us dollars to an address
         function sendMoney(mykey, mysecret, amount) {
@@ -149,6 +149,7 @@ const transfer = async (transferType, privateKey, sourceAddress, amountToSend, R
             });
         }
     }
+}
         // set the parameter for the request message
 //        var req = {
 //            method: 'GET',
