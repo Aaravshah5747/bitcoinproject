@@ -1,8 +1,7 @@
-//most important api
 var prompt = require('prompt-sync')({sigint: true});
 var coinbase =  require('coinbase');
 
-//updated 9/24 didn't commit
+
 //var mykey = prompt("Enter your api key here: ");
 //var mysecret = prompt("Enter your api secret here: ");
 //
@@ -15,7 +14,7 @@ function getPaymentMethods(client) {
     client.getPaymentMethods(function(err, paymentMethods) {
       console.log(paymentMethods);
     });
-    return paymentMethods;wallet
+    return paymentMethods;
 }
 
 //list available accounts
